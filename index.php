@@ -140,54 +140,5 @@
 			</div>
 		</div>
 	</footer>
-	
-	
-	<script>
-		const username = 'lodder'
-		const password = 'test'
-		
-		let headers = new Headers()
-		headers.set('Authorization', 'Basic ' + btoa(username + ':' + password))
-		headers.set('Content-Type', 'text/plain')
-
-		fetch('https://cors.joomjunk.co.uk', {
-			credentials: 'include',
-			method: 'GET',
-			headers: headers
-		})
-			.then(response => response.text())
-			.then(response => new DOMParser().parseFromString(response, 'text/html'))
-			.then(data => {
-				console.log(data.querySelectorAll('pre a'))
-			})
-	</script>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 </body>
 </html>
